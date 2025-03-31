@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/markdown.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <title>Markdown Themes</title>
+</head>
+
+<body>
+
+<h3 class="heading">Theme</h3>
+
+<div class="controls">
+  <div>
+    <select id="themes-select" class="themes-select" name="theme"></select>
+  </div>
+  <div>
+    <div>
+      <input type="radio" id="light" name="mode" value="light" />
+      <label for="light">Light</label>
+    </div>
+    <div>
+      <input type="radio" id="dark" name="mode" value="dark" />
+      <label for="dark">Dark</label>
+    </div>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+
+<hr>
+
+<pre><code><span class="hljs-keyword">const</span> extend = <span class="hljs-keyword">function</span>(<span class="hljs-params">Child, Parent</span>) {
+  <span class="hljs-title class_">Child</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span> = <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">create</span>(<span class="hljs-title class_">Parent</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>);
+  <span class="hljs-title class_">Child</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">constructor</span> = <span class="hljs-title class_">Child</span>;
+  <span class="hljs-title class_">Child</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">superclass</span> = <span class="hljs-title class_">Parent</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>;
+}</code></pre>
+
+<pre><code><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    std::cout &lt;&lt; <span class="hljs-string">"Here is some text"</span>;
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}</code></pre>
+
+<pre><code><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"><span class="hljs-selector-tag">body</span> {<span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;}</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/javascript"</span>&gt;</span><span class="language-javascript">
+  <span class="hljs-keyword">function</span> <span class="hljs-title function_">$init</span>(<span class="hljs-params"></span>) {<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'title'</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
+
+<pre><code><span class="hljs-keyword">@font-face</span> {
+  <span class="hljs-attribute">font-family</span>: Chunkfive; <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'Chunkfive.otf'</span>);
+}
+
+<span class="hljs-selector-tag">body</span>, <span class="hljs-selector-class">.usertext</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-number">#F0F0F0</span>; <span class="hljs-attribute">background</span>: <span class="hljs-number">#600</span>;
+  <span class="hljs-attribute">font-family</span>: Chunkfive, sans;
+  <span class="hljs-attr">--heading-1</span>: <span class="hljs-number">30px</span>/<span class="hljs-number">32px</span> Helvetica, sans-serif;
+}
+
+<span class="hljs-keyword">@import</span> url(print.css);
+<span class="hljs-keyword">@media</span> print {
+  <span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[href^=http]</span><span class="hljs-selector-pseudo">::after</span> {
+    <span class="hljs-attribute">content</span>: <span class="hljs-built_in">attr</span>(href)
+  }
+}</code></pre>
+
+<pre><code><span class="hljs-keyword">function</span> <span class="hljs-title function_">algorithm</span>(<span class="hljs-params">array</span>) {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; array.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-title function_">logic</span>(array[i], i);
+  }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TestView</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">View</span> {
+  <span class="hljs-keyword">static</span> name = <span class="hljs-string">'test'</span>;
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">super</span>();
+
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">button</span> = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findElem</span>(<span class="hljs-string">'button'</span>);
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">button</span>.<span class="hljs-title function_">bindTo</span>(<span class="hljs-string">'click'</span>, <span class="hljs-variable language_">this</span>.<span class="hljs-property">onClick</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">this</span>));
+  }
+
+  <span class="hljs-title function_">onClick</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-title function_">alert</span>(<span class="hljs-string">'Click!'</span>);
+  }
+}
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">"Hi!"</span>);
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">test</span>(<span class="hljs-params">block, cls</span>) {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">if</span> (cls.<span class="hljs-title function_">search</span>(<span class="hljs-regexp">/\bno\-highlight\b/</span>) != -<span class="hljs-number">1</span>)
+      <span class="hljs-keyword">return</span> <span class="hljs-title function_">process</span>(block, <span class="hljs-literal">true</span>, <span class="hljs-number">0x0F</span>) + <span class="hljs-string">` class="<span class="hljs-subst">${cls}</span>"`</span>;
+  } <span class="hljs-keyword">catch</span> (e) {
+    <span class="hljs-comment">/* handle exception */</span>
+  }
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span> / <span class="hljs-number">2</span>; i &lt; classes.<span class="hljs-property">length</span>; i++) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-title function_">checkCondition</span>(classes[i]) === <span class="hljs-literal">undefined</span>)
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'undefined'</span>);
+  }
+
+  <span class="hljs-keyword">return</span> (
+    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">web-component</span>&gt;</span>{block}<span class="hljs-tag">&lt;/<span class="hljs-name">web-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}</code></pre>
+
+<pre><code><span class="hljs-keyword">POST</span> <span class="hljs-string">/task?id=1</span> <span class="hljs-meta">HTTP/1.1</span>
+<span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>example.org
+<span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json; charset=utf-8
+<span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>137
+
+<span class="language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"status"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"ok"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"extended"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"results"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">{</span><span class="hljs-attr">"value"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"int64"</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-punctuation">{</span><span class="hljs-attr">"value"</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.0e+3</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">"type"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"decimal"</span><span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</span></code></pre>
+
+<pre><code><span class="hljs-punctuation">[</span>
+  <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"title"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"apples"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"count"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-number">12000</span><span class="hljs-punctuation">,</span> <span class="hljs-number">20000</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-attr">"text"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"..."</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">"sensitive"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"title"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"oranges"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"count"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-number">17500</span><span class="hljs-punctuation">,</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"description"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-attr">"text"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"..."</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">"sensitive"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">}</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">]</span></code></pre>
+
+<pre><code><span class="hljs-keyword">@import</span> <span class="hljs-string">"compass/reset"</span>;
+
+<span class="hljs-comment">// variables</span>
+<span class="hljs-variable">$colorGreen</span>: <span class="hljs-number">#008000</span>;
+<span class="hljs-variable">$colorGreenDark</span>: <span class="hljs-built_in">darken</span>(<span class="hljs-variable">$colorGreen</span>, <span class="hljs-number">10</span>);
+
+<span class="hljs-keyword">@mixin</span> container {
+    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">980px</span>;
+}
+
+<span class="hljs-comment">// mixins with parameters</span>
+<span class="hljs-keyword">@mixin</span> button(<span class="hljs-variable">$color</span>:green) {
+    <span class="hljs-keyword">@if</span> (<span class="hljs-variable">$color</span> == green) {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#008000</span>;
+    }
+    <span class="hljs-keyword">@else</span> if (<span class="hljs-variable">$color</span> == red) {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#B22222</span>;
+    }
+}
+
+<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-keyword">@include</span> button(red);
+}
+
+<span class="hljs-selector-tag">div</span>,
+<span class="hljs-selector-class">.navbar</span>,
+<span class="hljs-selector-id">#header</span>,
+<span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type=<span class="hljs-string">"input"</span>]</span> {
+    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Arial, sans-serif;
+    <span class="hljs-attribute">width</span>: auto;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+    <span class="hljs-attribute">display</span>: block;
+}
+
+<span class="hljs-selector-class">.row-12</span> &gt; <span class="hljs-selector-attr">[class*=<span class="hljs-string">"spans"</span>]</span> {
+    <span class="hljs-attribute">border-left</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#B5C583</span>;
+}
+
+<span class="hljs-comment">// nested definitions</span>
+<span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">padding</span>: {
+        <span class="hljs-attribute">left</span>: <span class="hljs-number">5px</span>; <span class="hljs-attribute">right</span>: <span class="hljs-number">5px</span>;
+    }
+  <span class="hljs-selector-tag">li</span> {
+      <span class="hljs-attribute">float</span>: left; <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">10px</span>;
+      <span class="hljs-selector-class">.home</span> {
+          <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'http://placehold.it/20'</span>) scroll no-repeat <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+      }
+  }
+}
+
+<span class="hljs-selector-class">.banner</span> {
+    <span class="hljs-keyword">@extend</span> .container;
+}
+
+<span class="hljs-selector-tag">a</span> {
+  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$colorGreen</span>;
+  &amp;<span class="hljs-selector-pseudo">:hover</span> { <span class="hljs-attribute">color</span>: <span class="hljs-variable">$colorGreenDark</span>; }
+  &amp;<span class="hljs-selector-pseudo">:visited</span> { <span class="hljs-attribute">color</span>: <span class="hljs-number">#c458cb</span>; }
+}
+
+<span class="hljs-keyword">@for</span> <span class="hljs-variable">$i</span> from <span class="hljs-number">1</span> through <span class="hljs-number">5</span> {
+    <span class="hljs-selector-class">.span</span>#{<span class="hljs-variable">$i</span>} {
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">20px</span>*<span class="hljs-variable">$i</span>;
+    }
+}
+
+<span class="hljs-keyword">@mixin</span> mobile {
+  <span class="hljs-keyword">@media</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span> : <span class="hljs-number">600px</span>) {
+    <span class="hljs-keyword">@content</span>;
+  }
+}</code></pre>
+
+<pre><code><span class="hljs-deletion">- Old Line</span>
+<span class="hljs-addition">+ New Line</span>
+  Usual Line</code></pre>
+
+<pre><code><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> "topic" (
+  "id" <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">PRIMARY</span> KEY,
+  "forum_id" <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,
+  "subject" <span class="hljs-type">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
+);
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> "topic"
+<span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> forum_id <span class="hljs-keyword">FOREIGN</span> KEY ("forum_id")
+<span class="hljs-keyword">REFERENCES</span> "forum" ("id");
+
+<span class="hljs-comment">-- Initials</span>
+<span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> "topic" ("forum_id", "subject")
+<span class="hljs-keyword">values</span> (<span class="hljs-number">2</span>, <span class="hljs-string">'artagnian'</span>);</code></pre>
+
+<pre><code><span class="hljs-comment">/* Binary Search Tree */</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Node</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">data, left = <span class="hljs-literal">null</span>, right = <span class="hljs-literal">null</span></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">data</span> = data;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">left</span> = left;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">right</span> = right;
+  }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">BST</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> = <span class="hljs-literal">null</span>;
+  }
+  <span class="hljs-title function_">add</span>(<span class="hljs-params">data</span>) {
+    <span class="hljs-keyword">const</span> node = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
+    <span class="hljs-keyword">if</span> (node === <span class="hljs-literal">null</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data);
+      <span class="hljs-keyword">return</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> searchTree = <span class="hljs-keyword">function</span>(<span class="hljs-params">node</span>) {
+        <span class="hljs-keyword">if</span> (data &lt; node.<span class="hljs-property">data</span>) {
+          <span class="hljs-keyword">if</span> (node.<span class="hljs-property">left</span> === <span class="hljs-literal">null</span>) {
+            node.<span class="hljs-property">left</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data);
+            <span class="hljs-keyword">return</span>;
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node.<span class="hljs-property">left</span> !== <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-title function_">searchTree</span>(node.<span class="hljs-property">left</span>);
+          }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (data &gt; node.<span class="hljs-property">data</span>) {
+          <span class="hljs-keyword">if</span> (node.<span class="hljs-property">right</span> === <span class="hljs-literal">null</span>) {
+            node.<span class="hljs-property">right</span> = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Node</span>(data);
+            <span class="hljs-keyword">return</span>;
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node.<span class="hljs-property">right</span> !== <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-title function_">searchTree</span>(node.<span class="hljs-property">right</span>);
+          }
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+        }
+      };
+      <span class="hljs-keyword">return</span> <span class="hljs-title function_">searchTree</span>(node);
+    }
+  }
+
+  <span class="hljs-title function_">findMin</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
+    <span class="hljs-keyword">while</span> (current.<span class="hljs-property">left</span> !== <span class="hljs-literal">null</span>) {
+      current = current.<span class="hljs-property">left</span>;
+    }
+    <span class="hljs-keyword">return</span> current.<span class="hljs-property">data</span>;
+  }
+
+  <span class="hljs-title function_">findMax</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
+    <span class="hljs-keyword">while</span> (current.<span class="hljs-property">right</span> !== <span class="hljs-literal">null</span>) {
+      current = current.<span class="hljs-property">right</span>;
+    }
+    <span class="hljs-keyword">return</span> current.<span class="hljs-property">data</span>;
+  }
+
+  <span class="hljs-title function_">find</span>(<span class="hljs-params">data</span>) {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
+    <span class="hljs-keyword">while</span> (current.<span class="hljs-property">data</span> !== data) {
+      <span class="hljs-keyword">if</span> (data &lt; current.<span class="hljs-property">data</span>) {
+        current = current.<span class="hljs-property">left</span>;
+      } <span class="hljs-keyword">else</span> {
+        current = current.<span class="hljs-property">right</span>;
+      }
+
+      <span class="hljs-keyword">if</span> (current === <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+      }
+    }
+    <span class="hljs-keyword">return</span> current;
+  }
+
+  <span class="hljs-title function_">isPresent</span>(<span class="hljs-params">data</span>) {
+    <span class="hljs-keyword">let</span> current = <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>;
+    <span class="hljs-keyword">while</span> (current) {
+      <span class="hljs-keyword">if</span> (data === current.<span class="hljs-property">data</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+      }
+      <span class="hljs-keyword">if</span> (data &lt; current.<span class="hljs-property">data</span>) {
+        current = current.<span class="hljs-property">left</span>;
+      } <span class="hljs-keyword">else</span> {
+        current = current.<span class="hljs-property">right</span>;
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-title function_">remove</span>(<span class="hljs-params">data</span>) {
+    <span class="hljs-keyword">const</span> removeNode = <span class="hljs-keyword">function</span>(<span class="hljs-params">node, data</span>) {
+      <span class="hljs-comment">// if the root was empty</span>
+      <span class="hljs-keyword">if</span> (node === <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+      }
+
+      <span class="hljs-keyword">if</span> (data === node.<span class="hljs-property">data</span>) {
+        <span class="hljs-comment">// node has no children</span>
+        <span class="hljs-keyword">if</span> (node.<span class="hljs-property">left</span> === <span class="hljs-literal">null</span> &amp;&amp; node.<span class="hljs-property">right</span> === <span class="hljs-literal">null</span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+        }
+        <span class="hljs-comment">// node has no left child</span>
+        <span class="hljs-keyword">if</span> (node.<span class="hljs-property">left</span> === <span class="hljs-literal">null</span>) {
+          <span class="hljs-keyword">return</span> node.<span class="hljs-property">right</span>;
+        }
+        <span class="hljs-comment">// node has no right child</span>
+        <span class="hljs-keyword">if</span> (node.<span class="hljs-property">right</span> === <span class="hljs-literal">null</span>) {
+          <span class="hljs-keyword">return</span> node.<span class="hljs-property">left</span>;
+        }
+        <span class="hljs-comment">// node has two children</span>
+        <span class="hljs-keyword">var</span> tempNode = node.<span class="hljs-property">right</span>;
+        <span class="hljs-keyword">while</span> (tempNode.<span class="hljs-property">left</span> !== <span class="hljs-literal">null</span>) {
+          tempNode = tempNode.<span class="hljs-property">left</span>;
+        }
+        node.<span class="hljs-property">data</span> = tempNode.<span class="hljs-property">data</span>;
+        node.<span class="hljs-property">right</span> = <span class="hljs-title function_">removeNode</span>(node.<span class="hljs-property">right</span>, tempNode.<span class="hljs-property">data</span>);
+        <span class="hljs-keyword">return</span> node;
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (data &lt; node.<span class="hljs-property">data</span>) {
+        node.<span class="hljs-property">left</span> = <span class="hljs-title function_">removeNode</span>(node.<span class="hljs-property">left</span>, data);
+        <span class="hljs-comment">// do note that we have to return the node that was</span>
+        <span class="hljs-comment">// passed in order not to orphan, say, the root node</span>
+        <span class="hljs-comment">// via implicitly returning undefined</span>
+        <span class="hljs-keyword">return</span> node;
+      } <span class="hljs-keyword">else</span> {
+        node.<span class="hljs-property">right</span> = <span class="hljs-title function_">removeNode</span>(node.<span class="hljs-property">right</span>, data);
+        <span class="hljs-keyword">return</span> node;
+      }
+    }
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> = <span class="hljs-title function_">removeNode</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>, data);
+  }
+
+  <span class="hljs-title function_">isBalanced</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findMinHeight</span>() &gt;= <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findMaxHeight</span>() - <span class="hljs-number">1</span>)
+  }
+
+  <span class="hljs-title function_">findMinHeight</span>(<span class="hljs-params">node = <span class="hljs-variable language_">this</span>.root</span>) {
+      <span class="hljs-keyword">if</span> (node === <span class="hljs-literal">null</span>) {
+          <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+      }
+      <span class="hljs-keyword">let</span> left = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findMinHeight</span>(node.<span class="hljs-property">left</span>);
+      <span class="hljs-keyword">let</span> right = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findMinHeight</span>(node.<span class="hljs-property">right</span>);
+
+      <span class="hljs-comment">// here we are going to do +1 to the lesser value so that</span>
+      <span class="hljs-comment">// if at least one returns -1 we don't count it as a step</span>
+      <span class="hljs-keyword">if</span> (left &lt; right) {
+          <span class="hljs-keyword">return</span> left + <span class="hljs-number">1</span>;
+      } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> right + <span class="hljs-number">1</span>;
+      };
+      <span class="hljs-comment">// or</span>
+      <span class="hljs-comment">// return Math.min(left, right) + 1;</span>
+  }
+
+  <span class="hljs-title function_">findMaxHeight</span>(<span class="hljs-params">node = <span class="hljs-variable language_">this</span>.root</span>) {
+      <span class="hljs-keyword">if</span> (node === <span class="hljs-literal">null</span>) {
+          <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+      }
+      <span class="hljs-keyword">let</span> left = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findMaxHeight</span>(node.<span class="hljs-property">left</span>);
+      <span class="hljs-keyword">let</span> right = <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">findMaxHeight</span>(node.<span class="hljs-property">right</span>);
+
+      <span class="hljs-comment">// this here we are going to do +1 to the greater value so that</span>
+      <span class="hljs-comment">// so long as there is at least one child we count it as a step</span>
+      <span class="hljs-keyword">if</span> (left &gt; right) {
+          <span class="hljs-keyword">return</span> left + <span class="hljs-number">1</span>;
+      } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> right + <span class="hljs-number">1</span>;
+      };
+      <span class="hljs-comment">// or</span>
+      <span class="hljs-comment">// return Math.max(left, right) + 1;</span>
+  }
+
+  <span class="hljs-title function_">inOrder</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> === <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> result = [];
+      <span class="hljs-keyword">function</span> <span class="hljs-title function_">traverseInOrder</span>(<span class="hljs-params">node</span>) {
+        node.<span class="hljs-property">left</span> &amp;&amp; <span class="hljs-title function_">traverseInOrder</span>(node.<span class="hljs-property">left</span>);
+        result.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">data</span>);
+        node.<span class="hljs-property">right</span> &amp;&amp; <span class="hljs-title function_">traverseInOrder</span>(node.<span class="hljs-property">right</span>);
+      }
+      <span class="hljs-title function_">traverseInOrder</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>);
+      <span class="hljs-keyword">return</span> result;
+    };
+  }
+
+  <span class="hljs-title function_">preOrder</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> === <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> result = [];
+      <span class="hljs-keyword">function</span> <span class="hljs-title function_">traversePreOrder</span>(<span class="hljs-params">node</span>) {
+        result.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">data</span>);
+        node.<span class="hljs-property">left</span> &amp;&amp; <span class="hljs-title function_">traversePreOrder</span>(node.<span class="hljs-property">left</span>);
+        node.<span class="hljs-property">right</span> &amp;&amp; <span class="hljs-title function_">traversePreOrder</span>(node.<span class="hljs-property">right</span>);
+      };
+      <span class="hljs-title function_">traversePreOrder</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>);
+      <span class="hljs-keyword">return</span> result;
+    };
+  }
+
+  <span class="hljs-title function_">postOrder</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> === <span class="hljs-literal">null</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">const</span> result = [];
+      <span class="hljs-keyword">function</span> <span class="hljs-title function_">traversePostOrder</span>(<span class="hljs-params">node</span>) {
+        node.<span class="hljs-property">left</span> &amp;&amp; <span class="hljs-title function_">traversePostOrder</span>(node.<span class="hljs-property">left</span>);
+        node.<span class="hljs-property">right</span> &amp;&amp; <span class="hljs-title function_">traversePostOrder</span>(node.<span class="hljs-property">right</span>);
+        result.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">data</span>);
+      };
+      <span class="hljs-title function_">traversePostOrder</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>);
+      <span class="hljs-keyword">return</span> result;
+    }
+  }
+
+  <span class="hljs-comment">// there could also probably be a traversal</span>
+  <span class="hljs-comment">// method to output the values in a reverse order</span>
+  <span class="hljs-comment">// the pseudocode would be: push right, push value, push left</span>
+
+  <span class="hljs-title function_">levelOrder</span>(<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">let</span> result = [];
+      <span class="hljs-keyword">let</span> Q = [];
+      <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> != <span class="hljs-literal">null</span>) {
+          Q.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>);
+          <span class="hljs-keyword">while</span>(Q.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) {
+              <span class="hljs-keyword">let</span> node = Q.<span class="hljs-title function_">shift</span>();
+              result.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">data</span>);
+              <span class="hljs-keyword">if</span> (node.<span class="hljs-property">left</span> != <span class="hljs-literal">null</span>) {
+                  Q.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">left</span>);
+              };
+              <span class="hljs-keyword">if</span> (node.<span class="hljs-property">right</span> != <span class="hljs-literal">null</span>) {
+                  Q.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">right</span>);
+              };
+          };
+          <span class="hljs-keyword">return</span> result;
+      } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+      };
+  };
+
+  <span class="hljs-title function_">reverseLevelOrder</span>(<span class="hljs-params"></span>) {
+
+    <span class="hljs-comment">// it logs left-to-right (exactly that) all the values first</span>
+    <span class="hljs-comment">// of max height, then of height above that and so on</span>
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+
+    <span class="hljs-keyword">const</span> q = [<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>];
+    <span class="hljs-keyword">const</span> res = [];
+    <span class="hljs-keyword">while</span>(q.<span class="hljs-property">length</span>) {
+        <span class="hljs-keyword">const</span> node = q.<span class="hljs-title function_">shift</span>();
+        res.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">data</span>);
+
+        <span class="hljs-comment">// do note that we push the right node first</span>
+        <span class="hljs-comment">// so that when we reverse res, the values of</span>
+        <span class="hljs-comment">// each height follow left-to-right as opposed</span>
+        <span class="hljs-comment">// to right-to-left if we were to apply the</span>
+        <span class="hljs-comment">// usual levelOrder function and simply reverse</span>
+        <span class="hljs-comment">// the array it returns</span>
+        node.<span class="hljs-property">right</span> &amp;&amp; q.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">right</span>);
+        node.<span class="hljs-property">left</span> &amp;&amp; q.<span class="hljs-title function_">push</span>(node.<span class="hljs-property">left</span>);
+    }
+
+    <span class="hljs-keyword">return</span> res.<span class="hljs-title function_">reverse</span>();
+  }
+
+  <span class="hljs-title function_">invert</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-comment">// this function turns Tree A into a such Tree B</span>
+    <span class="hljs-comment">// that the inOrder traversal for Tree B is going</span>
+    <span class="hljs-comment">// to return the same array as for Tree A except with</span>
+    <span class="hljs-comment">// numbers in the reversed order</span>
+    <span class="hljs-comment">// this way if the inorder traversal for Tree A is [10, 12, 22, 34], the</span>
+    <span class="hljs-comment">// inOrder Traversal for Tree B is going to be [34, 22, 12, 10]</span>
+
+    <span class="hljs-keyword">if</span>(!<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+
+    <span class="hljs-keyword">const</span> swap = <span class="hljs-keyword">function</span>(<span class="hljs-params">node</span>) {
+      <span class="hljs-comment">// all we gotta do is swap the left and right</span>
+      <span class="hljs-comment">// pointers for every node</span>
+
+      <span class="hljs-keyword">if</span>(!node.<span class="hljs-property">right</span> &amp;&amp; !node.<span class="hljs-property">left</span>) <span class="hljs-keyword">return</span> node;
+      <span class="hljs-keyword">if</span>(!node.<span class="hljs-property">right</span>) {
+        node.<span class="hljs-property">right</span> = node.<span class="hljs-property">left</span>;
+        node.<span class="hljs-property">left</span> = <span class="hljs-literal">null</span>;
+        node.<span class="hljs-property">right</span> = <span class="hljs-title function_">swap</span>(node.<span class="hljs-property">right</span>);
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!node.<span class="hljs-property">left</span>) {
+        node.<span class="hljs-property">left</span> = node.<span class="hljs-property">right</span>;
+        node.<span class="hljs-property">right</span> = <span class="hljs-literal">null</span>;
+        node.<span class="hljs-property">left</span> = <span class="hljs-title function_">swap</span>(node.<span class="hljs-property">left</span>);
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">let</span> left = node.<span class="hljs-property">left</span>;
+        node.<span class="hljs-property">left</span> = node.<span class="hljs-property">right</span>;
+        node.<span class="hljs-property">right</span> = left;
+        node.<span class="hljs-property">left</span> = <span class="hljs-title function_">swap</span>(node.<span class="hljs-property">left</span>);
+        node.<span class="hljs-property">right</span> = <span class="hljs-title function_">swap</span>(node.<span class="hljs-property">right</span>);
+      }
+      <span class="hljs-keyword">return</span> node;
+    };
+
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span> = <span class="hljs-title function_">swap</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">root</span>);
+  }
+}
+
+<span class="hljs-keyword">const</span> bst = <span class="hljs-keyword">new</span> <span class="hljs-title function_">BST</span>();
+
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">9</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">4</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">17</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">3</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">6</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">22</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">5</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">7</span>);
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">20</span>);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMin</span>()); <span class="hljs-comment">// =&gt; 3</span>
+bst.<span class="hljs-title function_">remove</span>(<span class="hljs-number">3</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">find</span>(<span class="hljs-number">7</span>)); <span class="hljs-comment">// =&gt; Node(7)</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMin</span>()); <span class="hljs-comment">// =&gt; 4</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMax</span>()); <span class="hljs-comment">// =&gt; 22</span>
+
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">3</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">isPresent</span>(<span class="hljs-number">3</span>)); <span class="hljs-comment">// true</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMinHeight</span>()); <span class="hljs-comment">// =&gt; 1</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMaxHeight</span>()); <span class="hljs-comment">// =&gt; 3</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">isBalanced</span>()); <span class="hljs-comment">// false</span>
+
+bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">10</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMinHeight</span>()); <span class="hljs-comment">// =&gt; 2</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">findMaxHeight</span>()); <span class="hljs-comment">// =&gt; 3</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(bst.<span class="hljs-title function_">isBalanced</span>()); <span class="hljs-comment">// =&gt; true</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'inOrder: '</span> + bst.<span class="hljs-title function_">inOrder</span>()); <span class="hljs-comment">// 3,4,5,6,7,9,10,17,20,22</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'preOrder: '</span> + bst.<span class="hljs-title function_">preOrder</span>()); <span class="hljs-comment">// 9,4,3,6,5,7,17,10,22,20</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'postOrder: '</span> + bst.<span class="hljs-title function_">postOrder</span>()); <span class="hljs-comment">// 3,5,7,6,4,10,20,22,17,9</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'levelOrder: '</span> + bst.<span class="hljs-title function_">levelOrder</span>()); <span class="hljs-comment">// 9,4,17,3,6,10,22,5,7,20</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'levelOrder from bottom: '</span> + bst.<span class="hljs-title function_">reverseLevelOrder</span>()); <span class="hljs-comment">// 5,7,20,3,6,10,22,4,17,9</span>
+
+bst.<span class="hljs-title function_">invert</span>(); <span class="hljs-comment">// invert</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'inOrder for Inverted: '</span> + bst.<span class="hljs-title function_">inOrder</span>()); <span class="hljs-comment">// 22,20,17,10,9,7,6,5,4,3</span></code></pre>
+
+<pre><code><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Person</span> {
+  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>;
+  doStuff&lt;V&gt;(<span class="hljs-attr">value</span>: V): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>;
+}
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Programming</span> {
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Programmer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Person</span> {
+      <span class="hljs-attr">code</span>: <span class="hljs-built_in">boolean</span>;
+  }
+
+  <span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> <span class="hljs-title class_">Code</span> = <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">Programmer</span> = <span class="hljs-title class_">Programming</span>.<span class="hljs-property">Programmer</span>;
+<span class="hljs-keyword">type</span> <span class="hljs-title class_">Code</span> = <span class="hljs-title class_">Programming</span>.<span class="hljs-property">Code</span>;
+
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isTomSssM</span>(<span class="hljs-params"><span class="hljs-attr">value</span>: <span class="hljs-built_in">unknown</span></span>): value is <span class="hljs-title class_">TomSssM</span> {
+  <span class="hljs-keyword">const</span> { code } = value <span class="hljs-keyword">as</span> {code?: <span class="hljs-built_in">boolean</span>};
+
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> code === <span class="hljs-string">'boolean'</span>;
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TomSssM</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Programmer</span> {
+  <span class="hljs-keyword">public</span> <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>;
+
+  <span class="hljs-keyword">public</span> code = <span class="hljs-literal">true</span>;
+
+  <span class="hljs-keyword">public</span> <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">'TomSssM'</span>;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = <span class="hljs-number">19</span>;
+  }
+
+  <span class="hljs-keyword">private</span> <span class="hljs-title function_">isCoding</span>(<span class="hljs-params"></span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">code</span> ?? <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-keyword">public</span> doStuff&lt;V&gt;(<span class="hljs-attr">value</span>: V): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> {
+      <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isCoding</span>()) {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+      }
+
+      <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${<span class="hljs-variable language_">this</span>.name}</span> at <span class="hljs-subst">${<span class="hljs-variable language_">this</span>.age}</span> is doing <span class="hljs-subst">${value}</span>`</span>;
+  }
+}
+
+<span class="hljs-keyword">const</span> person = <span class="hljs-keyword">new</span> <span class="hljs-title class_">TomSssM</span>();
+
+<span class="hljs-keyword">if</span> (!<span class="hljs-title function_">isTomSssM</span>(person)) {
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">'Give TomSssM'</span>);
+}
+
+person.<span class="hljs-property">doStuff</span>&lt;<span class="hljs-title class_">Code</span>&gt;(<span class="hljs-string">'value'</span>);</code></pre>
+
+</body>
+</html>

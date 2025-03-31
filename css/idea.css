@@ -1,0 +1,92 @@
+/*
+    IntelliJ Idea
+ */
+
+.intellij-idea pre {
+    color: #000;
+    background: #fff;
+}
+
+.intellij-idea .hljs-subst,
+.intellij-idea .hljs-title {
+    font-weight: 400;
+    color: #000;
+}
+
+.intellij-idea .hljs-comment,
+.intellij-idea .hljs-quote {
+    color: #808080;
+    font-style: italic;
+}
+
+.intellij-idea .hljs-meta {
+    color: #808000;
+}
+
+.intellij-idea .hljs-tag {
+    background: #efefef;
+}
+
+.intellij-idea .hljs-keyword,
+.intellij-idea .hljs-literal,
+.intellij-idea .hljs-name,
+.intellij-idea .hljs-section,
+.intellij-idea .hljs-selector-class,
+.intellij-idea .hljs-selector-id,
+.intellij-idea .hljs-selector-tag,
+.intellij-idea .hljs-type {
+    font-weight: 700;
+    color: #000080;
+}
+
+.intellij-idea .hljs-attribute,
+.intellij-idea .hljs-link,
+.intellij-idea .hljs-number,
+.intellij-idea .hljs-regexp {
+    font-weight: 700;
+    color: #0000ff;
+}
+
+.intellij-idea .hljs-link,
+.intellij-idea .hljs-number,
+.intellij-idea .hljs-regexp {
+    font-weight: 400;
+}
+
+.intellij-idea .hljs-string {
+    color: #008000;
+    font-weight: 700;
+}
+
+.intellij-idea .hljs-bullet,
+.intellij-idea .hljs-formula,
+.intellij-idea .hljs-symbol {
+    color: #000;
+    background: #d0eded;
+    font-style: italic;
+}
+
+.intellij-idea .hljs-doctag {
+    text-decoration: underline;
+}
+
+.intellij-idea .hljs-template-variable,
+.intellij-idea .hljs-variable {
+    color: #660e7a;
+}
+
+.intellij-idea .hljs-addition {
+    background: #baeeba;
+}
+
+.intellij-idea .hljs-deletion {
+    background: #ffc8bd;
+}
+
+.intellij-idea .hljs-emphasis {
+    font-style: italic;
+}
+
+.intellij-idea .hljs-strong {
+    font-weight: 700;
+}

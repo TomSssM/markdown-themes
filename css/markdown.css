@@ -1,0 +1,251 @@
+html, body {
+	font-family: "Segoe UI", sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	word-wrap: break-word;
+	padding: 0 16px;
+}
+
+body {
+	padding-top: 14px;
+	margin: 8px;
+	margin-top: 12px;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ol, ul, pre {
+	margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+	line-height: 1.25;
+	margin-top: 24px;
+	margin-bottom: 16px;
+}
+
+/* Prevent `sub` and `sup` elements from affecting line height */
+sub,
+sup {
+	line-height: 0;
+}
+
+ul ul:first-child,
+ul ol:first-child,
+ol ul:first-child,
+ol ol:first-child {
+	margin-bottom: 0;
+}
+
+img, video {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	margin-bottom: 16px;
+}
+
+li p {
+	margin-bottom: 10px;
+}
+
+ul,
+ol {
+	margin-bottom: 10px;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	border-bottom: 1px solid;
+}
+
+h1 {
+	font-size: 28px;
+	padding-bottom: 9px;
+	margin-top: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h2 {
+	font-size: 21px;
+	padding-bottom: 7px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h3 {
+	font-size: 17px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
+h5 {
+	font-size: 13px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+table {
+	border-collapse: collapse;
+	margin-bottom: 10px;
+}
+
+th {
+	border-bottom: 1px solid;
+}
+
+th,
+td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+details {
+	margin-bottom: 16px;
+}
+
+details summary {
+	cursor: pointer;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0px 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-radius: 2px;
+}
+
+pre {
+	padding: 16px;
+	/* border-radius: 3px; */
+	overflow: auto;
+}
+
+code {
+	font-family: Consolas, monospace;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+code {
+	display: inline;
+	padding: 1px 3px;
+	border-radius: 4px;
+}
+
+pre code {
+	display: inline-block;
+	padding: 0;
+	border-radius: 0;
+	tab-size: 4;
+}
+
+/** Theming */
+
+.dark {
+	color: #d4d4d4;
+	background-color: #1e1e1e;
+}
+
+.light {
+	color: #000;
+	background-color: #fff;
+}
+
+.dark pre {
+	border: 1px solid #303031;
+	/* background-color: #161616; */
+}
+
+.light pre {
+	border: 1px solid #e5e5e5;
+	/* background-color: #f8f8f8; */
+}
+
+.light th {
+	border-color: #4f4f4f;
+}
+
+.dark th {
+	border-color: #b9b9b9;
+}
+
+.light h1,
+.light h2,
+.light hr,
+.light td {
+	border-color: #d1d1d1;
+}
+
+.dark h1,
+.dark h2,
+.dark hr,
+.dark td {
+	border-color: #474747;
+}
+
+.light code {
+	color: #a31515;
+	background-color: #e5e5e5;
+}
+
+.dark code {
+	color: #d7ba7d;
+	background-color: #353535;
+}
+
+.light pre code,
+.dark pre code {
+	color: inherit;
+	background: none;
+}
+
+.light blockquote {
+	border-color: #78b5de;
+	background: #f2f2f2;
+}
+
+.dark blockquote {
+	border-color: #114e77;
+	background: #222222;
+}
+
+.light a {
+	color: #006ab1;
+}
+
+.dark a {
+	color: #3794ff;
+}
+
+
+@media screen and (max-width: 550px) {
+	html, body {
+		padding: 0 12px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	html, body {
+		padding: 0 8px;
+	}
+}
