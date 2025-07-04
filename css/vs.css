@@ -8,7 +8,8 @@
 }
 
 .vs-light .hljs-keyword,
-.vs-light .hljs-literal {
+.vs-light .hljs-literal,
+.vs-light .hljs-variable {
 	color: #00f;
 }
 
@@ -50,7 +51,6 @@
 	color: #000;
 }
 
-.vs-light .hljs-variable,
 .vs-light .hljs-meta,
 .vs-light .hljs-meta-keyword,
 .vs-light .hljs-attr,

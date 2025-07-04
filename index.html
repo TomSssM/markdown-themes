@@ -249,12 +249,12 @@
   Usual Line</code></pre>
 
 <pre><code><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> "topic" (
-  "id" <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">PRIMARY</span> KEY,
+  "id" <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span> <span class="hljs-keyword">PRIMARY KEY</span>,
   "forum_id" <span class="hljs-type">integer</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>,
   "subject" <span class="hljs-type">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">NULL</span>
 );
 <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> "topic"
-<span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> forum_id <span class="hljs-keyword">FOREIGN</span> KEY ("forum_id")
+<span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> forum_id <span class="hljs-keyword">FOREIGN KEY</span> ("forum_id")
 <span class="hljs-keyword">REFERENCES</span> "forum" ("id");
 
 <span class="hljs-comment">-- Initials</span>
