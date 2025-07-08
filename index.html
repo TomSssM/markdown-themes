@@ -10,27 +10,30 @@
 
 <body>
 
-<h3 class="heading">Theme</h3>
+<div class="controls-container">
+  <h3 class="heading">Theme</h3>
 
-<div class="controls">
-  <div>
-    <select id="themes-select" class="themes-select" name="theme"></select>
-  </div>
-  <div>
+  <div class="controls">
     <div>
-      <input type="radio" id="light" name="mode" value="light" />
-      <label for="light">Light</label>
+      <select id="themes-select" class="themes-select" name="theme"></select>
     </div>
     <div>
-      <input type="radio" id="dark" name="mode" value="dark" />
-      <label for="dark">Dark</label>
+      <div>
+        <input type="radio" id="light" name="mode" value="light" />
+        <label for="light">Light</label>
+      </div>
+      <div>
+        <input type="radio" id="dark" name="mode" value="dark" />
+        <label for="dark">Dark</label>
+      </div>
     </div>
   </div>
+
+  <hr>
+
 </div>
 
 <script src="./script.js"></script>
-
-<hr>
 
 <pre><code><span class="hljs-keyword">const</span> extend = <span class="hljs-keyword">function</span>(<span class="hljs-params">Child, Parent</span>) {
   <span class="hljs-title class_">Child</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span> = <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">create</span>(<span class="hljs-title class_">Parent</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>);
