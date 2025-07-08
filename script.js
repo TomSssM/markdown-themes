@@ -25,6 +25,15 @@ const themes = [
             light: 'intellij-idea',
             dark: false
         }
+    },
+    {
+        id: 'darcula',
+        name: 'Darcula',
+        stylesheet: 'darcula',
+        className: {
+            light: false,
+            dark: 'darcula'
+        }
     }
 ];
 

@@ -1,0 +1,101 @@
+/*
+    Darcula
+ */
+
+.darcula pre {
+    color: #a9b7c6;
+    background: #2b2b2b;
+}
+
+.darcula .hljs-comment {
+    color: #606366;
+    font-style: italic;
+}
+
+.darcula .hljs-tag {
+    color: #a4a3a3;
+}
+
+.darcula .hljs-operator,
+.darcula .hljs-punctuation,
+.darcula .hljs-subst {
+    color: #a9b7c6;
+}
+
+.darcula .hljs-operator {
+    opacity: 0.7;
+}
+
+.darcula .hljs-bullet,
+.darcula .hljs-deletion,
+.darcula .hljs-name,
+.darcula .hljs-selector-tag,
+.darcula .hljs-template-variable,
+.darcula .hljs-variable {
+    color: #4eade5;
+}
+
+.darcula .hljs-attr,
+.darcula .hljs-link,
+.darcula .hljs-literal,
+.darcula .hljs-number,
+.darcula .hljs-symbol,
+.darcula .hljs-variable.constant_ {
+    color: #689757;
+}
+
+.darcula .hljs-class .hljs-title,
+.darcula .hljs-title,
+.darcula .hljs-title.class_ {
+    color: #bbb529;
+}
+
+.darcula .hljs-strong {
+    font-weight: 700;
+    color: #bbb529;
+}
+
+.darcula .hljs-addition,
+.darcula .hljs-code,
+.darcula .hljs-string {
+    color: #6a8759;
+}
+
+.darcula .hljs-built_in,
+.darcula .hljs-doctag,
+.darcula .hljs-keyword.hljs-atrule,
+.darcula .hljs-quote,
+.darcula .hljs-regexp {
+    color: #629755;
+}
+
+.darcula .hljs-attribute,
+.darcula .hljs-function .hljs-title,
+.darcula .hljs-section,
+.darcula .hljs-title.function_,
+.darcula .ruby .hljs-property {
+    color: #9876aa;
+}
+
+.darcula .diff .hljs-meta,
+.darcula .hljs-keyword,
+.darcula .hljs-template-tag,
+.darcula .hljs-type {
+    color: #cc7832;
+}
+
+.darcula .hljs-emphasis {
+    color: #cc7832;
+    font-style: italic;
+}
+
+.darcula .hljs-meta,
+.darcula .hljs-meta .hljs-keyword,
+.darcula .hljs-meta .hljs-string {
+    color: gray;
+}
+
+.darcula .hljs-meta .hljs-keyword,
+.darcula .hljs-meta-keyword {
+    font-weight: 700;
+}
