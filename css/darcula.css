@@ -5,6 +5,7 @@
 .darcula pre {
     color: #a9b7c6;
     background: #2b2b2b;
+    border-color: #2b2b2b;
 }
 
 .darcula .hljs-comment {
