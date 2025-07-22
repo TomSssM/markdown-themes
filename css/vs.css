@@ -9,7 +9,8 @@
 
 .vs-light .hljs-keyword,
 .vs-light .hljs-literal,
-.vs-light .hljs-variable {
+.vs-light .hljs-variable,
+.vs-light .hljs-type {
 	color: #00f;
 }
 
@@ -45,7 +46,6 @@
 	color: #a31515;
 }
 
-.vs-light .hljs-type,
 .vs-light .hljs-built_in,
 .vs-light .hljs-builtin-name {
 	color: #000;
