@@ -638,46 +638,47 @@ bst.<span class="hljs-title function_">add</span>(<span class="hljs-number">10</
 bst.<span class="hljs-title function_">invert</span>(); <span class="hljs-comment">// invert</span>
 <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'inOrder for Inverted: '</span> + bst.<span class="hljs-title function_">inOrder</span>()); <span class="hljs-comment">// 22,20,17,10,9,7,6,5,4,3</span></code></pre>
 
-<pre><code><span class="hljs-keyword">interface</span> <span class="hljs-title class_">Person</span> {
-  <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
-  <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>;
-  doStuff&lt;V&gt;(<span class="hljs-attr">value</span>: V): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span>;
+<pre><code>interface <span class="hljs-title class_">Person</span> {
+  <span class="hljs-attr">name</span>: string;
+  <span class="hljs-attr">age</span>: number;
+  doStuff&lt;V&gt;(<span class="hljs-attr">value</span>: V): string | <span class="hljs-literal">null</span>;
 }
 
-<span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Programming</span> {
-  <span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">Programmer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Person</span> {
-      <span class="hljs-attr">code</span>: <span class="hljs-built_in">boolean</span>;
+namespace <span class="hljs-title class_">Programming</span> {
+  <span class="hljs-keyword">export</span> interface <span class="hljs-title class_">Programmer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Person</span> {
+      <span class="hljs-attr">code</span>: boolean;
   }
 
-  <span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> <span class="hljs-title class_">Code</span> = <span class="hljs-built_in">string</span>;
+  <span class="hljs-keyword">export</span> type <span class="hljs-title class_">Code</span> = string;
 }
 
-<span class="hljs-keyword">type</span> <span class="hljs-title class_">Programmer</span> = <span class="hljs-title class_">Programming</span>.<span class="hljs-property">Programmer</span>;
-<span class="hljs-keyword">type</span> <span class="hljs-title class_">Code</span> = <span class="hljs-title class_">Programming</span>.<span class="hljs-property">Code</span>;
+type <span class="hljs-title class_">Programmer</span> = <span class="hljs-title class_">Programming</span>.<span class="hljs-property">Programmer</span>;
+type <span class="hljs-title class_">Code</span> = <span class="hljs-title class_">Programming</span>.<span class="hljs-property">Code</span>;
 
-<span class="hljs-keyword">function</span> <span class="hljs-title function_">isTomSssM</span>(<span class="hljs-params"><span class="hljs-attr">value</span>: <span class="hljs-built_in">unknown</span></span>): value is <span class="hljs-title class_">TomSssM</span> {
-  <span class="hljs-keyword">const</span> { code } = value <span class="hljs-keyword">as</span> {code?: <span class="hljs-built_in">boolean</span>};
+<span class="hljs-keyword">function</span> <span class="hljs-title function_">isTomSssM</span>(<span class="hljs-params">value: unknown</span>): value is <span class="hljs-title class_">TomSssM</span> {
+  <span class="hljs-keyword">const</span> { code } = value <span class="hljs-keyword">as</span> {code?: boolean};
 
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> code === <span class="hljs-string">'boolean'</span>;
 }
 
-<span class="hljs-keyword">class</span> <span class="hljs-title class_">TomSssM</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Programmer</span> {
-  <span class="hljs-keyword">public</span> <span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">TomSssM</span> implements <span class="hljs-title class_">Programmer</span> {
+  public <span class="hljs-attr">name</span>: string;
 
-  <span class="hljs-keyword">public</span> <span class="hljs-attr">age</span>: <span class="hljs-built_in">number</span>;
+  public <span class="hljs-attr">age</span>: number;
 
-  <span class="hljs-keyword">public</span> code = <span class="hljs-literal">true</span>;
+  public <span class="hljs-attr">code</span>: boolean;
 
-  <span class="hljs-keyword">public</span> <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+  public <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
       <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = <span class="hljs-string">'TomSssM'</span>;
       <span class="hljs-variable language_">this</span>.<span class="hljs-property">age</span> = <span class="hljs-number">19</span>;
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">code</span> = <span class="hljs-literal">true</span>;
   }
 
-  <span class="hljs-keyword">private</span> <span class="hljs-title function_">isCoding</span>(<span class="hljs-params"></span>) {
+  private <span class="hljs-title function_">isCoding</span>(<span class="hljs-params"></span>) {
       <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">code</span> ?? <span class="hljs-literal">true</span>;
   }
 
-  <span class="hljs-keyword">public</span> doStuff&lt;V&gt;(<span class="hljs-attr">value</span>: V): <span class="hljs-built_in">string</span> | <span class="hljs-literal">null</span> {
+  public doStuff&lt;V&gt;(<span class="hljs-attr">value</span>: V): string | <span class="hljs-literal">null</span> {
       <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">isCoding</span>()) {
           <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
       }
