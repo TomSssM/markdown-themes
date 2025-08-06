@@ -104,7 +104,8 @@
 .vs-dark .hljs-keyword,
 .vs-dark .hljs-literal,
 .vs-dark .hljs-meta,
-.vs-dark .hljs-meta-keyword {
+.vs-dark .hljs-meta-keyword,
+.vs-dark .hljs-variable {
 	color: #569CD6;
 }
 
@@ -146,7 +147,6 @@
 	color: #569CD6;
 }
 
-.vs-dark .hljs-variable,
 .vs-dark .hljs-type,
 .vs-dark .hljs-built_in,
 .vs-dark .hljs-builtin-name {
