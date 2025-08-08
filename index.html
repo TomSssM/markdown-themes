@@ -695,5 +695,210 @@ bst.<span class="hljs-title function_">invert</span>(); <span class="hljs-commen
 
 person.<span class="hljs-property">doStuff</span>&lt;<span class="hljs-title class_">Code</span>&gt;(<span class="hljs-string">'value'</span>);</code></pre>
 
+<pre><code><span class="hljs-comment">/* Maps */</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MyMap</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span> = {};
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">count</span> = <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-keyword">get</span> <span class="hljs-title function_">size</span>() {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">count</span>;
+  }
+
+  <span class="hljs-title function_">set</span>(<span class="hljs-params">key, value</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[key] = value;
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">count</span>++;
+  }
+
+  <span class="hljs-title function_">has</span>(<span class="hljs-params">key</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>.<span class="hljs-title function_">hasOwnProperty</span>(key);
+  }
+
+  <span class="hljs-title function_">get</span>(<span class="hljs-params">key</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">has</span>(key) ? <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[key] : <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-title function_">delete</span>(<span class="hljs-params">key</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">has</span>(key)) {
+      <span class="hljs-keyword">delete</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[key];
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">count</span>--;
+    }
+  }
+
+  <span class="hljs-keyword">get</span> <span class="hljs-title function_">values</span>() {
+    <span class="hljs-keyword">const</span> result = [];
+
+    <span class="hljs-comment">// for (let key of Object.keys(this.collection)) {</span>
+    <span class="hljs-comment">//   result.push(this.collection[key]);</span>
+    <span class="hljs-comment">// }</span>
+
+    <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">keys</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>).<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> result.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span>[key]));
+    <span class="hljs-keyword">return</span> (result.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) ? result : <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-title function_">clear</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">collection</span> = {};
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">count</span> = <span class="hljs-number">0</span>;
+  }
+}
+
+<span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyMap</span>();
+map.<span class="hljs-title function_">set</span>(<span class="hljs-string">'arms'</span>, <span class="hljs-number">2</span>);
+map.<span class="hljs-title function_">set</span>(<span class="hljs-string">'fingers'</span>, <span class="hljs-number">10</span>);
+map.<span class="hljs-title function_">set</span>(<span class="hljs-string">'eyes'</span>, <span class="hljs-number">2</span>);
+map.<span class="hljs-title function_">set</span>(<span class="hljs-string">'belley button'</span>, <span class="hljs-number">1</span>);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map.<span class="hljs-title function_">get</span>(<span class="hljs-string">'fingers'</span>)); <span class="hljs-comment">// =&gt; 10</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map.<span class="hljs-property">size</span>); <span class="hljs-comment">// =&gt; 4</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map.<span class="hljs-property">values</span>); <span class="hljs-comment">// =&gt; [2, 10, 2, 1]</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map.<span class="hljs-title function_">has</span>(<span class="hljs-string">'eyes'</span>)); <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map.<span class="hljs-title function_">has</span>(<span class="hljs-string">'valueOf'</span>)); <span class="hljs-comment">// =&gt; false</span>
+
+<span class="hljs-comment">// ES6 built-in Map class implementation:</span>
+<span class="hljs-keyword">const</span> map2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>();
+map2.<span class="hljs-title function_">has</span>(<span class="hljs-string">'hands'</span>); <span class="hljs-comment">// =&gt; false</span>
+map2.<span class="hljs-title function_">entries</span>(); <span class="hljs-comment">// MapIterator (Object like)</span>
+
+<span class="hljs-keyword">const</span> keyObj1 = {};
+<span class="hljs-keyword">const</span> keyObj2 = {};
+<span class="hljs-keyword">const</span> keyFunc1 = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {};
+<span class="hljs-keyword">const</span> keyFunc2 = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {};
+
+map2.<span class="hljs-title function_">set</span>(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'string value'</span>);
+
+map2.<span class="hljs-title function_">set</span>(keyObj1, <span class="hljs-string">'obj one value'</span>);
+map2.<span class="hljs-title function_">set</span>(keyObj2, <span class="hljs-string">'obj two value'</span>);
+
+map2.<span class="hljs-title function_">set</span>(keyFunc1, <span class="hljs-string">'func one value'</span>);
+map2.<span class="hljs-title function_">set</span>(keyFunc2, <span class="hljs-string">'func two value'</span>);
+
+map2.<span class="hljs-title function_">set</span>(<span class="hljs-number">12</span>, <span class="hljs-string">'numeric value'</span>);
+
+map2.<span class="hljs-title function_">set</span>(<span class="hljs-title class_">NaN</span>, <span class="hljs-string">'NaN value'</span>);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-property">size</span>); <span class="hljs-comment">// =&gt; 7</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(<span class="hljs-string">'hello'</span>)); <span class="hljs-comment">// =&gt; 'string value</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(keyObj1)); <span class="hljs-comment">// =&gt; 'obj one value'</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(keyObj2)); <span class="hljs-comment">// =&gt; 'obj two value'</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(keyFunc1)); <span class="hljs-comment">// =&gt; 'func one value'</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(keyFunc2)); <span class="hljs-comment">// =&gt; 'func two value'</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(<span class="hljs-number">12</span>)); <span class="hljs-comment">// =&gt; 'numeric value'</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2.<span class="hljs-title function_">get</span>(<span class="hljs-title class_">NaN</span>)); <span class="hljs-comment">// =&gt; 'NaN value'</span>
+
+map2.<span class="hljs-title function_">values</span>(); <span class="hljs-comment">// =&gt; MapIterator for values (Array like)</span>
+map2.<span class="hljs-title function_">keys</span>(); <span class="hljs-comment">// =&gt; MapIterator for keys (Array like)</span>
+
+map2.<span class="hljs-title function_">delete</span>(<span class="hljs-string">'NaN'</span>); <span class="hljs-comment">// =&gt; false</span>
+map2.<span class="hljs-title function_">has</span>(<span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// =&gt; true</span>
+map2.<span class="hljs-title function_">delete</span>(<span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// =&gt; true</span>
+map2.<span class="hljs-title function_">has</span>(<span class="hljs-title class_">NaN</span>); <span class="hljs-comment">// =&gt; false</span>
+
+map2.<span class="hljs-title function_">clear</span>();
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(map2); <span class="hljs-comment">// =&gt; Map(0) {}</span>
+
+<span class="hljs-comment">// you can initialize a map with an iterator:</span>
+<span class="hljs-keyword">const</span> m3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>([[<span class="hljs-string">'a'</span>, <span class="hljs-literal">true</span>],[<span class="hljs-string">'string'</span>, <span class="hljs-string">'str'</span>]]);
+
+<span class="hljs-keyword">const</span> gen = <span class="hljs-keyword">function</span>* (i) {
+  <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">3</span>) i = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">while</span>(i &lt;= <span class="hljs-number">3</span>) <span class="hljs-keyword">yield</span> [<span class="hljs-string">`key<span class="hljs-subst">${i++}</span>`</span>, i];
+}
+<span class="hljs-keyword">const</span> m4 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Map</span>(<span class="hljs-title function_">gen</span>(<span class="hljs-number">1</span>));</code></pre>
+
+<pre><code><span class="hljs-comment">/* Heaps: MaxHeap */</span>
+
+<span class="hljs-comment">// left child: i * 2</span>
+<span class="hljs-comment">// right child: i * 2 + 1</span>
+<span class="hljs-comment">// parent: i / 2</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">MaxHeap</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span> = [<span class="hljs-literal">null</span>];
+  }
+
+  <span class="hljs-title function_">insert</span>(<span class="hljs-params">num</span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-title function_">push</span>(num);
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-property">length</span> &gt; <span class="hljs-number">2</span>) {
+      <span class="hljs-keyword">let</span> i = <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-property">length</span> - <span class="hljs-number">1</span>;
+      <span class="hljs-keyword">while</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i] &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(i / <span class="hljs-number">2</span>)]) {
+        [<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i], <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(i / <span class="hljs-number">2</span>)]] = [<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[<span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(i / <span class="hljs-number">2</span>)], <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i]];
+        i = <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">floor</span>(i / <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">if</span>(i === <span class="hljs-number">1</span>) <span class="hljs-keyword">break</span>;
+      }
+    }
+  }
+
+  <span class="hljs-title function_">remove</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-property">length</span> &lt; <span class="hljs-number">2</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+    <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-property">length</span> === <span class="hljs-number">2</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-title function_">pop</span>();
+    }
+
+    <span class="hljs-keyword">const</span> biggest = <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[<span class="hljs-number">1</span>];
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[<span class="hljs-number">1</span>] = <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-title function_">pop</span>();
+    <span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">let</span> left = i * <span class="hljs-number">2</span>;
+    <span class="hljs-keyword">let</span> right = left + <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">while</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[left] &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i] || <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[right] &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i]) {
+      <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[left] &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[right] || 
+        (<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[right] === <span class="hljs-literal">undefined</span> &amp;&amp; <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[left] &gt; <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i])) 
+      {
+        [<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i], <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[left]] = [<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[left], <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i]];
+        i = left;
+      } <span class="hljs-keyword">else</span> {
+        [<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i], <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[right]] = [<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[right], <span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>[i]];
+        i = right;
+      }
+      left = i * <span class="hljs-number">2</span>;
+      right = left + <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-keyword">return</span> biggest;
+  }
+
+  <span class="hljs-title function_">sort</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">const</span> arr = [];
+    <span class="hljs-keyword">while</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">heap</span>.<span class="hljs-property">length</span> &gt; <span class="hljs-number">1</span>) {
+      arr.<span class="hljs-title function_">push</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-title function_">remove</span>());
+    }
+    <span class="hljs-keyword">return</span> arr;
+  }
+}
+
+<span class="hljs-keyword">const</span> heap = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MaxHeap</span>();
+
+heap.<span class="hljs-title function_">insert</span>(<span class="hljs-number">3</span>);
+heap.<span class="hljs-title function_">insert</span>(<span class="hljs-number">2</span>);
+heap.<span class="hljs-title function_">insert</span>(<span class="hljs-number">1</span>);
+heap.<span class="hljs-title function_">insert</span>(<span class="hljs-number">7</span>);
+heap.<span class="hljs-title function_">insert</span>(<span class="hljs-number">4</span>);
+heap.<span class="hljs-title function_">insert</span>(<span class="hljs-number">12</span>);
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(...heap.<span class="hljs-property">heap</span>);
+<span class="hljs-comment">// [null, 12, 4, 7, 2, 3, 1]</span>
+
+<span class="hljs-comment">//      12</span>
+<span class="hljs-comment">//    /    \</span>
+<span class="hljs-comment">//   4      7</span>
+<span class="hljs-comment">//  / \    /</span>
+<span class="hljs-comment">// 2   3  1</span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(heap.<span class="hljs-title function_">remove</span>()); <span class="hljs-comment">// 12</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(heap.<span class="hljs-title function_">remove</span>()); <span class="hljs-comment">// 7</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(...heap.<span class="hljs-property">heap</span>);
+<span class="hljs-comment">// [null, 4, 3, 1, 2]</span>
+
+<span class="hljs-comment">//     4</span>
+<span class="hljs-comment">//    / \</span>
+<span class="hljs-comment">//   3   1</span>
+<span class="hljs-comment">//  /       </span>
+<span class="hljs-comment">// 2       </span>
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Sorted array: <span class="hljs-subst">${heap.sort()}</span>`</span>);
+<span class="hljs-comment">// Sorted array: 4, 3, 2, 1</span></code></pre>
+
 </body>
 </html>
