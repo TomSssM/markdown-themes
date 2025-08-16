@@ -239,6 +239,6 @@ pre code {
 
 @media screen and (max-width: 550px) {
 	html, body {
-		padding: 0 2px;
+		padding: 0 4px;
 	}
 }
