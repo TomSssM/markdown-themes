@@ -237,15 +237,8 @@ pre code {
 	color: #3794ff;
 }
 
-
 @media screen and (max-width: 550px) {
 	html, body {
-		padding: 0 12px;
-	}
-}
-
-@media screen and (max-width: 400px) {
-	html, body {
-		padding: 0 8px;
+		padding: 0 2px;
 	}
 }
