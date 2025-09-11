@@ -1,14 +1,5 @@
 const themes = [
     {
-        id: 'the-holidays-code',
-        name: 'The Holidays Code',
-        stylesheet: 'code',
-        className: {
-            light: 'vscode-light',
-            dark: 'vscode-dark'
-        }
-    },
-    {
         id: 'vs',
         name: 'Visual Studio',
         stylesheet: 'vs',
@@ -18,20 +9,29 @@ const themes = [
         }
     },
     {
+        id: 'vs-plus',
+        name: 'Visual Studio Plus',
+        stylesheet: 'vs-plus',
+        className: {
+            light: 'vs-plus-light',
+            dark: 'vs-plus-dark'
+        }
+    },
+    {
+        id: 'code',
+        name: 'The Holidays Code',
+        stylesheet: 'code',
+        className: {
+            light: 'code',
+            dark: false
+        }
+    },
+    {
         id: 'intellij-idea',
         name: 'IntelliJ Idea',
         stylesheet: 'idea',
         className: {
             light: 'intellij-idea',
-            dark: false
-        }
-    },
-    {
-        id: 'darcula',
-        name: 'Darcula',
-        stylesheet: 'darcula',
-        className: {
-            light: false,
             dark: 'darcula'
         }
     }
