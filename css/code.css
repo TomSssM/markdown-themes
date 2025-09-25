@@ -91,15 +91,24 @@
 	color: #000;
 }
 
+.code .hljs-link {
+  text-decoration: underline;
+}
+
+.code .hljs-section {
+  color: #009900;
+}
+
+.code .hljs-bullet {
+  color: #0000e6;
+}
+
 .code .hljs-subst,
 .code .hljs-class,
-.code .hljs-link,
 .code .hljs-symbol,
 .code .hljs-function,
 .code .hljs-params,
 .code .hljs-formula,
-.code .hljs-bullet,
-.code .hljs-section,
 .code .hljs-quote,
 .code .hljs-doctag,
 .code .hljs-template-variable {
