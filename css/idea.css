@@ -53,6 +53,10 @@
     font-weight: 400;
 }
 
+.intellij-idea .hljs-link {
+    text-decoration: underline;
+}
+
 .intellij-idea .hljs-string {
     color: #008000;
     font-weight: 700;
@@ -135,6 +139,10 @@
 .darcula .hljs-symbol,
 .darcula .hljs-variable.constant_ {
     color: #689757;
+}
+
+.darcula .hljs-link {
+    text-decoration: underline;
 }
 
 .darcula .hljs-class .hljs-title,
